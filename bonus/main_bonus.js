@@ -11,6 +11,8 @@ quanto manca:  Stabilire l'ora attuale e attraverso una operazione matematica st
 
 // odd/even input
 const userChoice = prompt('scegliere 1 per pari e 2 per dispari');
+console.log(userChoice);
+
 let matchChoice;
 let sum;
 let rest;
@@ -28,9 +30,11 @@ console.log(matchChoice);
 
 // user number input
 const userNumber = Number(prompt("scegliere un tra 1 e 9 da giocare"));
+console.log(userNumber);
 
 //pc number generator
 const pcNumber = Math.floor(Math.random() * 9) + 1;
+console.log(pcNumber);
 
 
 // user input value check and sum calc
@@ -39,6 +43,8 @@ if (userNumber >= 1 && userNumber <= 9) {
     sum = userNumber + pcNumber;
     console.log(sum);
     rest = sum % 2;
+    console.log(rest);
+    
 } else {
     alert("per favore, scegliere un numero compreso tra 1 e 9");
     location.reload();
