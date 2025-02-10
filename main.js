@@ -7,3 +7,17 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca. */
 
+
+
+// prompts dati utente
+// calcolo tariffa generica al km
+// applico condizioni scontistica in base all'eta, limitando a due il numero dei decimali
+
+
+const distance = prompt('inserire la distanza che si vuole percorrere in km [10, 20.22]');
+console.log(distance);
+
+const age = prompt('isnerire la propria eta [15, 45, 20]');
+console.log(age);
+
+
