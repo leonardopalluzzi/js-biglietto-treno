@@ -10,23 +10,32 @@ quanto manca:  Stabilire l'ora attuale e attraverso una operazione matematica st
 
 
 // odd/even input
-const userChoice = prompt('scegliere 1 per pari e 2 per dispari');
+let userChoice = prompt('scegliere 1 per pari e 2 per dispari');
 console.log(userChoice);
 
 let matchChoice;
 let sum;
 let rest;
+let valueCheck = true;
 
 if (userChoice == 1){
     matchChoice = "pari";
 } else if (userChoice == 2) {
     matchChoice = "dispari";
 } else {
-    alert("per favore scegliere un valore intero compreso tra 1 e 2");
-    location.reload();
+    userChoice = prompt('per favore scelgiere un valore intero compreso tra 1 e 2');
+    if (userChoice != 1 && userChoice != 2){
+        location.reload();
+        return;
+    }
 }
 
 console.log(matchChoice);
+
+if (valueCheck == false) {
+    location.replace("index_bonus.html");
+}
+
 
 // user number input
 const userNumber = Number(prompt("scegliere un tra 1 e 9 da giocare"));
@@ -51,10 +60,7 @@ if (userNumber >= 1 && userNumber <= 9) {
 }
 
 // winner calc
-if (rest == 0 && matchChoice == "pari") {
-    alert(`il tuo avverario ha scelto ${pcNumber}, congratulazioni hai vinto!`);
-    location.reload();
-} else if (rest == 1 && matchChoice == "dispari") {
+if ((rest == 0 && matchChoice == "pari") || (rest == 1 && matchChoice == "dispari")) {
     alert(`il tuo avverario ha scelto ${pcNumber}, congratulazioni hai vinto!`);
     location.reload();
 } else {
