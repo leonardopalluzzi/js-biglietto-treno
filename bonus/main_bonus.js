@@ -46,12 +46,12 @@ if (userNumber >= 1 && userNumber <= 9) {
 
 // winner calc
 if (rest == 0 && matchChoice == "pari") {
-    alert("congratulazioni hai vinto!");
+    alert(`il tuo avverario ha scelto ${pcNumber}, congratulazioni hai vinto!`);
     location.reload();
 } else if (rest == 1 && matchChoice == "dispari") {
-    alert("congratulazioni hai vinto");
+    alert(`il tuo avverario ha scelto ${pcNumber}, congratulazioni hai vinto!`);
     location.reload();
 } else {
-    alert("hai perso :(");
+    alert(`il tuo avversario ha scelto ${pcNumber}, hai perso :(`);
     location.reload();
 }
