@@ -16,7 +16,6 @@ console.log(userChoice);
 let matchChoice;
 let sum;
 let rest;
-let valueCheck = true;
 
 if (userChoice == 1){
     matchChoice = "pari";
@@ -25,17 +24,11 @@ if (userChoice == 1){
 } else {
     userChoice = prompt('per favore scelgiere un valore intero compreso tra 1 e 2');
     if (userChoice != 1 && userChoice != 2){
-        location.reload();
-        return;
+        location.href = location.href;
     }
 }
 
 console.log(matchChoice);
-
-if (valueCheck == false) {
-    location.replace("index_bonus.html");
-}
-
 
 // user number input
 const userNumber = Number(prompt("scegliere un tra 1 e 9 da giocare"));
