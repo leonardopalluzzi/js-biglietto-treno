@@ -22,65 +22,9 @@ if (userChoice == 1){
 } else if (userChoice == 2) {
     matchChoice = "dispari";
 } else {
-    userChoice = prompt('per favore scelgiere un valore intero compreso tra 1 e 2');
-    if (userChoice != 1 && userChoice != 2){
-        location.href = location.href;
-    }
-}
-
-
-
-// tentativi di location.reload
-// 1
-if (userChoice == 1){
-    matchChoice = "pari";
-} else if (userChoice == 2) {
-    matchChoice = "dispari";
-} else {
     alert("per favore inserire un valore intero compreso tra 1 e 2");
-    location.reload();
+    window.location.reload();
 }
-
-//2
-let valueCheck = true
-
-if (userChoice == 1){
-    matchChoice = "pari";
-} else if (userChoice == 2) {
-    matchChoice = "dispari";
-} else {
-    alert("per favore inserire un valore intero compreso tra 1 e 2")
-    valueCheck = false;
-    console.log(valueCheck);
-    
-}
-
-if (valueCheck == false){
-    location.reload();
-}
-
-//3
-if (userChoice == 1){
-    matchChoice = "pari";
-} else if (userChoice == 2) {
-    matchChoice = "dispari";
-} else {
-    alert("per favore inserire un valore intero compreso tra 1 e 2")
-    location.href = location.href;
-}
-
-//4
-if (userChoice == 1){
-    matchChoice = "pari";
-} else if (userChoice == 2) {
-    matchChoice = "dispari";
-} else {
-    alert("per favore inserire un valore intero compreso tra 1 e 2")
-    window.location.reload(true);
-}
-
-
-
 
 console.log(matchChoice);
 
@@ -103,14 +47,14 @@ if (userNumber >= 1 && userNumber <= 9) {
     
 } else {
     alert("per favore, scegliere un numero compreso tra 1 e 9");
-    location.reload();
+    window.location.reload();
 }
 
 // winner calc
 if ((rest == 0 && matchChoice == "pari") || (rest == 1 && matchChoice == "dispari")) {
     alert(`il tuo avverario ha scelto ${pcNumber}, congratulazioni hai vinto!`);
-    location.reload();
+    window.location.reload();
 } else {
     alert(`il tuo avversario ha scelto ${pcNumber}, hai perso :(`);
-    location.reload();
+    window.location.reload();
 }
