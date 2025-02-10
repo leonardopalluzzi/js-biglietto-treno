@@ -25,3 +25,17 @@ const basePrice = distance * 0.21;
 
 // initialize final price
 let finalPrice;
+
+// discount calc
+if (age < 18) {
+    finalPrice = basePrice - ((basePrice * 20) / 100);
+    console.log(finalPrice);
+    alert(`il tuo biglietto costa ${finalPrice}`);
+} else if (age > 65) {
+    finalPrice = basePrice - ((basePrice * 40) / 100);
+    console.log(finalPrice);
+    alert(`il tuo biglieto costa ${finalPrice}`);
+} else {
+    console.log(basePrice);
+    alert(`il tuo biglietto costa ${basePrice}`);
+}
