@@ -28,6 +28,60 @@ if (userChoice == 1){
     }
 }
 
+
+
+// tentativi di location.reload
+// 1
+if (userChoice == 1){
+    matchChoice = "pari";
+} else if (userChoice == 2) {
+    matchChoice = "dispari";
+} else {
+    alert("per favore inserire un valore intero compreso tra 1 e 2");
+    location.reload();
+}
+
+//2
+let valueCheck = true
+
+if (userChoice == 1){
+    matchChoice = "pari";
+} else if (userChoice == 2) {
+    matchChoice = "dispari";
+} else {
+    alert("per favore inserire un valore intero compreso tra 1 e 2")
+    valueCheck = false;
+    console.log(valueCheck);
+    
+}
+
+if (valueCheck == false){
+    location.reload();
+}
+
+//3
+if (userChoice == 1){
+    matchChoice = "pari";
+} else if (userChoice == 2) {
+    matchChoice = "dispari";
+} else {
+    alert("per favore inserire un valore intero compreso tra 1 e 2")
+    location.href = location.href;
+}
+
+//4
+if (userChoice == 1){
+    matchChoice = "pari";
+} else if (userChoice == 2) {
+    matchChoice = "dispari";
+} else {
+    alert("per favore inserire un valore intero compreso tra 1 e 2")
+    window.location.reload(true);
+}
+
+
+
+
 console.log(matchChoice);
 
 // user number input
