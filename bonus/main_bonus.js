@@ -8,8 +8,11 @@ quanto manca:  Stabilire l'ora attuale e attraverso una operazione matematica st
 // somma valori
 // calcolo vincitore
 
-const userChoice = prompt('scegliere 1 per pari e 2 per dispari')
+
+// odd/even input
+const userChoice = prompt('scegliere 1 per pari e 2 per dispari');
 let matchChoice;
+let sum;
 
 if (userChoice == 1){
     matchChoice = "pari";
@@ -18,4 +21,18 @@ if (userChoice == 1){
 } else {
     alert("per favore scegliere un valore intero compreso tra 1 e 2");
     location.reload();
+}
+
+console.log(matchChoice);
+
+// user number input
+const userNumber = Number(prompt("scegliere un tra 1 e 9 da giocare"));
+
+//pc number generator
+const pcNumber = 
+
+
+// user input value check and sum calc
+if (userNumber >= 1 && userNumber <= 9) {
+    sum = userNumber + 
 }
