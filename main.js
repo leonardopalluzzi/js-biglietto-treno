@@ -29,13 +29,11 @@ let finalPrice;
 // discount calc
 if (age < 18) {
     finalPrice = basePrice - ((basePrice * 20) / 100);
-    console.log(finalPrice.toFixed(2));
-    alert(`il tuo biglietto costa ${finalPrice.toFixed(2)}`);
 } else if (age > 65) {
     finalPrice = basePrice - ((basePrice * 40) / 100);
-    console.log(finalPrice);
-    alert(`il tuo biglieto costa ${finalPrice.toFixed(2)}`);
 } else {
-    console.log(basePrice);
-    alert(`il tuo biglietto costa ${basePrice.toFixed(2)}`);
+    finalPrice =  basePrice;
 }
+
+console.log(finalPrice.toFixed(2));
+alert(`il tuo biglietto costa ${finalPrice.toFixed(2)}`);
