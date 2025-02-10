@@ -16,6 +16,7 @@ let matchChoice;
 let sum;
 let rest;
 
+// user input value check
 if (userChoice != 1 && userChoice != 2) {
     do {
         userChoice = Number(prompt('per favore, scegliere 1 per pari e 2 per dispari'));
@@ -28,7 +29,6 @@ if (userChoice == 1) {
     matchChoice = "dispari";
 }
 
-
 console.log(userChoice);
 console.log(matchChoice);
 
@@ -39,17 +39,16 @@ let userNumber = Number(prompt("scegliere un numero tra 1 e 9 da giocare"));
 const pcNumber = Math.floor(Math.random() * 9) + 1;
 
 
-// user input value check and sum calc
+// user input value check
 if (userNumber < 1 || userNumber > 9) {
-    // sum value
     do {
         userNumber = Number(prompt("per favore, scegliere un numero intero compreso tra 1 e 9"));
     } while (userNumber < 1 || userNumber > 9);
 }
 
+// sum and rest calc
 sum = userNumber + pcNumber;
 rest = sum % 2;
-
 
 console.log(userNumber);
 console.log(pcNumber);
