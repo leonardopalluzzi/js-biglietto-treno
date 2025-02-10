@@ -17,7 +17,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 const distance = Number(prompt('inserire la distanza che si vuole percorrere in km [10, 20.22]'));
 console.log(distance);
 
-const age = Number(prompt('isnerire la propria eta [15, 45, 20]'));
+const age = Number(prompt('inserire la propria eta [15, 45, 20]'));
 console.log(age);
 
 // base price calc
