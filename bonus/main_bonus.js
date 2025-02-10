@@ -51,4 +51,7 @@ if (rest == 0 && matchChoice == "pari") {
 } else if (rest == 1 && matchChoice == "dispari") {
     alert("congratulazioni hai vinto");
     location.reload();
+} else {
+    alert("hai perso :(");
+    location.reload();
 }
