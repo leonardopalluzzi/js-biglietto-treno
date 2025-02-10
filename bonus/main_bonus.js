@@ -29,7 +29,7 @@ console.log(matchChoice);
 const userNumber = Number(prompt("scegliere un tra 1 e 9 da giocare"));
 
 //pc number generator
-const pcNumber = 
+const pcNumber = Math.floor(Math.random() * 9) + 1;
 
 
 // user input value check and sum calc
