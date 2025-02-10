@@ -10,27 +10,28 @@ quanto manca:  Stabilire l'ora attuale e attraverso una operazione matematica st
 
 
 // odd/even input
-let userChoice = prompt('scegliere 1 per pari e 2 per dispari');
+let userChoice = Number(prompt('scegliere 1 per pari e 2 per dispari'));
 console.log(userChoice);
 
 let matchChoice;
 let sum;
 let rest;
 
-if (userChoice == 1){
-    matchChoice = "pari";
-} else if (userChoice == 2) {
-    matchChoice = "dispari";
+if (userChoice != 1 && userChoice != 2) {
+    do {
+        userChoice = Number(prompt('per favore, scegliere 1 per pari e 2 per dispari'));
+    } while (userChoice != 1 && userChoice != 2);
 } else {
-    alert("per favore inserire un valore intero compreso tra 1 e 2");
-    window.location.reload();
+    if (userChoice == 1) {
+        matchChoice = "pari";
+    } else if (userChoice == 2) {
+        matchChoice = "dispari";
+    }
+    console.log(matchChoice);
 }
 
-console.log(matchChoice);
-
 // user number input
-const userNumber = Number(prompt("scegliere un tra 1 e 9 da giocare"));
-console.log(userNumber);
+let userNumber = Number(prompt("scegliere un numero tra 1 e 9 da giocare"));
 
 //pc number generator
 const pcNumber = Math.floor(Math.random() * 9) + 1;
@@ -40,15 +41,17 @@ console.log(pcNumber);
 // user input value check and sum calc
 if (userNumber >= 1 && userNumber <= 9) {
     // sum values and rest calc
+    console.log(userNumber);
     sum = userNumber + pcNumber;
     console.log(sum);
     rest = sum % 2;
     console.log(rest);
-    
 } else {
-    alert("per favore, scegliere un numero compreso tra 1 e 9");
-    window.location.reload();
+    do {
+        userNumber = Number(prompt("per favore, scegliere un numero intero compreso tra 1 e 9"));
+    } while (userNumber < 1 || userNumber > 9);
 }
+
 
 // winner calc
 if ((rest == 0 && matchChoice == "pari") || (rest == 1 && matchChoice == "dispari")) {
